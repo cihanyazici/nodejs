@@ -1,0 +1,14 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cihanyazici/nodejs.git",
+  "author": "Cihan YAZICI <cyazici@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^9.6.3",
+    "firebase-admin": "^10.0.1",
+    "genius-lyrics": "^4.3.5",
+    "imdb-light": "^1.1.5"
+  }
+}
