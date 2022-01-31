@@ -9,16 +9,12 @@
   "author": "Cihan YAZICI <cyazici@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "firebase": "^9.6.3",
-    "firebase-admin": "^10.0.1",
-    "genius-lyrics": "^4.3.5",
     "imdb-light": "^1.1.5"
   },
   "bugs": {
     "url": "https://github.com/cihanyazici/nodejs/issues"
   },
   "homepage": "https://github.com/cihanyazici/nodejs#readme",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
