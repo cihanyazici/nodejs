@@ -17,7 +17,7 @@ async function test(id) {
 module.exports = async (req, res) => { 
   movie=await test(req.query.id)
   try {
-    res.send({rating:movie.Rating}) 
+    res.send({movie}) 
   } catch (err) {
     res.send(err) 
   }
