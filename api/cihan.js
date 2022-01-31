@@ -11,15 +11,14 @@ function fetch(id) {
 
 async function test(id) {
   var quote = await fetch(id);
-  return "cihan";
+  return quote;
 }
 
 module.exports = async (req, res) => { 
-  const { id } = req.query;
-
+  movie=await test(req.query.id)
   try {
-    res.send(await test(id)) // send the lyrics
+    res.send({rating:movie.Rating}) 
   } catch (err) {
-    res.send(err) // send the thrown error
+    res.send(err) 
   }
 }
