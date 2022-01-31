@@ -11,7 +11,7 @@ function fetch(id) {
 
 async function test(id) {
   var quote = await fetch(id);
-  return {"c":"s","a":"3"};
+  return "cihan";
 }
 
 module.exports = async (req, res) => { 
