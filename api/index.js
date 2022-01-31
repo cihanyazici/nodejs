@@ -3,22 +3,22 @@ const IMDb = require('imdb-light');
 
 function fetch(id) {
   return new Promise(function (resolve, reject) {
-          IMDb.fetch(id, (details) => {
-                  resolve(details);
-          });
+    IMDb.fetch(id, (details) => {
+      resolve(details);
+    });
   });
 }
 
-async function test(id) {
-  var quote = await fetch(id);
-  return quote;
+async function getImdbMovie(id) {
+  var movie = await fetch(id);
+  return movie;
 }
 
-module.exports = async (req, res) => { 
-  movie=await test(req.query.id)
+module.exports = async (req, res) => {
+  movie = await getImdbMovie(req.query.id)
   try {
-    res.send({movie}) 
+    res.send({ result: { "imdbRating": movie.Rating, "movieName" : movie.Title, "poster" : movie.Poster } })
   } catch (err) {
-    res.send(err) 
+    res.send(err)
   }
 }
